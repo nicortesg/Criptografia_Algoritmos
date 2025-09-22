@@ -13,10 +13,13 @@ Este repositorio contiene la implementación del laboratorio 2 (Components and C
 ---
 
 ## 2. Vista Component-and-Connector
-![alt text](image.png)
+<img width="1384" height="144" alt="image" src="https://github.com/user-attachments/assets/a43a37f3-26e0-4245-9e8d-61d8e2cad0da" />
 - **component-1**: MongoDB. Almacena la colección `items` utilizada por component-2.
+- <img width="1903" height="703" alt="image" src="https://github.com/user-attachments/assets/9b882279-9449-4995-bd3f-53d6fb665514" />
 - **component-2**: FastAPI + Strawberry GraphQL (servicio GraphQL en `/graphql`, puerto `8000`). Conecta a MongoDB mediante `motor`.
+- <img width="1920" height="973" alt="image" src="https://github.com/user-attachments/assets/7a6d62aa-f7bb-490e-8c26-0fc8ee1f3680" />
 - **component-3**: MySQL (imagen `mysql:8`). Base de datos relacional que almacena la tabla `items` usada por component-4.
+- <img width="1119" height="180" alt="image" src="https://github.com/user-attachments/assets/33783ff4-0405-4b94-92d2-548d3bfc096b" />
 - **component-4**: Flask REST API (endpoints `/items`, puerto `8001`). Conecta a MySQL usando `mysql-connector-python`.
 
 ---
@@ -57,7 +60,6 @@ c&c/
 
 ## 5. Requisitos previos
 
-- Docker Desktop con integración WSL2 (si trabajas en Windows + WSL).
 - WSL2 (o un Linux con Docker instalado).
 - `docker` y `docker compose` disponibles en la terminal.
 
@@ -176,56 +178,3 @@ docker exec -it component-1 mongosh --eval 'use db; db.items.find().pretty()'
 ```
 
 ---
-
-## 9. Troubleshooting (problemas comunes)
-
-- ``\*\* no encontrado\*\*: en WSL usa `docker compose` (plugin) y asegúrate de activar WSL Integration en Docker Desktop.
-- ``\*\* a la DB al arrancar\*\*: `depends_on` no espera a que la DB esté lista. Espera unos segundos o añade `healthcheck` en `docker-compose.yml`.
-- **Permisos docker**: si `docker` requiere sudo, añade tu usuario al grupo `docker` (`sudo usermod -aG docker $USER`) y reconéctate.
-- **Puerto en uso**: ajusta los mapeos de puertos en `docker-compose.yml` si aparecen errores de bind.
-
----
-
-## 10. Entrega — formato y pasos (GitHub)
-
-1. Crea la rama `laboratory_2`:
-
-```bash
-git checkout -b laboratory_2
-```
-
-2. Crea la carpeta del usuario (reemplaza `<TU_UNAL_USERNAME>`):
-
-```
-mkdir -p laboratories/laboratory_2/<TU_UNAL_USERNAME>
-```
-
-3. Mueve o copia este README.md dentro de esa carpeta (o crea un README con el mismo contenido).
-4. Añade, commitea y pushea:
-
-```bash
-git add laboratories/laboratory_2/<TU_UNAL_USERNAME>/README.md
-git commit -m "Laboratory 2 - deliverable"
-git push origin laboratory_2
-```
-
----
-
-## 11. Archivos a incluir en la entrega
-
-- `docker-compose.yml`
-- `component-2/` (app, Dockerfile, requirements.txt)
-- `component-4/` (app, Dockerfile, requirements.txt)
-- `README.md` (este archivo)
-
----
-
-## 12. Notas finales
-
-- Reemplaza el campo **Nombre** y `<TU_UNAL_USERNAME>` antes de commitear.
-- Si quieres, incluye capturas de pantalla (logs, GraphQL con datos) en la carpeta de la entrega.
-
----
-
-Si necesitas que adapte el README (por ejemplo, traducir, añadir diagrama, capturas o instrucciones para Windows), dime qué quieres cambiar y lo actualizo.
-
