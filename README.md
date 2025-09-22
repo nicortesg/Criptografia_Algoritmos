@@ -1,2 +1,2 @@
-# Criptograf-a
+# Criptografia
 Ejemplos de criptografia bàsicos
