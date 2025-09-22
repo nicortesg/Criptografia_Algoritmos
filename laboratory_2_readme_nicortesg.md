@@ -14,13 +14,13 @@ Este repositorio contiene la implementación del laboratorio 2 (Components and C
 
 ## 2. Vista Component-and-Connector
 <img width="1384" height="144" alt="image" src="https://github.com/user-attachments/assets/a43a37f3-26e0-4245-9e8d-61d8e2cad0da" />
-- **component-1**: MongoDB. Almacena la colección `items` utilizada por component-2.
-- <img width="1903" height="703" alt="image" src="https://github.com/user-attachments/assets/9b882279-9449-4995-bd3f-53d6fb665514" />
-- **component-2**: FastAPI + Strawberry GraphQL (servicio GraphQL en `/graphql`, puerto `8000`). Conecta a MongoDB mediante `motor`.
-- <img width="1920" height="973" alt="image" src="https://github.com/user-attachments/assets/7a6d62aa-f7bb-490e-8c26-0fc8ee1f3680" />
-- **component-3**: MySQL (imagen `mysql:8`). Base de datos relacional que almacena la tabla `items` usada por component-4.
-- <img width="1119" height="180" alt="image" src="https://github.com/user-attachments/assets/33783ff4-0405-4b94-92d2-548d3bfc096b" />
-- **component-4**: Flask REST API (endpoints `/items`, puerto `8001`). Conecta a MySQL usando `mysql-connector-python`.
+**component-1**: MongoDB. Almacena la colección `items` utilizada por component-2.
+<img width="1903" height="703" alt="image" src="https://github.com/user-attachments/assets/9b882279-9449-4995-bd3f-53d6fb665514" />
+**component-2**: FastAPI + Strawberry GraphQL (servicio GraphQL en `/graphql`, puerto `8000`). Conecta a MongoDB mediante `motor`.
+<img width="1920" height="973" alt="image" src="https://github.com/user-attachments/assets/7a6d62aa-f7bb-490e-8c26-0fc8ee1f3680" />
+**component-3**: MySQL (imagen `mysql:8`). Base de datos relacional que almacena la tabla `items` usada por component-4.
+<img width="1119" height="180" alt="image" src="https://github.com/user-attachments/assets/33783ff4-0405-4b94-92d2-548d3bfc096b" />
+**component-4**: Flask REST API (endpoints `/items`, puerto `8001`). Conecta a MySQL usando `mysql-connector-python`.
 
 ---
 
